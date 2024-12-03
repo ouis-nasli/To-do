@@ -1,6 +1,6 @@
 import ProUpgradeSVG from '@/assets/imgs/pro-upgrade.svg';
 
-const ProUpgrate = () => {
+const ProUpgrade = () => {
 	return (
 		<div className='relative flex items-center gap-x-6 py-9 px-6 bg-secondary border-2 border-secondary-dark shadow-inset-soft'>
 			<div>
@@ -16,4 +16,4 @@ const ProUpgrate = () => {
 	);
 };
 
-export default ProUpgrate;
+export default ProUpgrade;

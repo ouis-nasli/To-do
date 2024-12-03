@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 
 const TodoComponent = () => {
 	return (
-		<div className='flex justify-center w-screen'>
+		<div className='flex justify-center w-full  '>
 			<Outlet />
 		</div>
 	);
