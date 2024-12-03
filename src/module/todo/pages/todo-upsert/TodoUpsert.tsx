@@ -21,7 +21,7 @@ const TodoUpsert = () => {
 	});
 
 	const formOptions = { resolver: yupResolver(validationSchema) };
-	const { register, handleSubmit, reset, formState } = useForm(formOptions);
+	const { register, handleSubmit, formState } = useForm(formOptions);
 	const { errors } = formState;
 
 	const onSubmit = (inputs: any) => {

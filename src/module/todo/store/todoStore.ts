@@ -9,7 +9,7 @@ export interface ITodo {
 interface ITodoStore {
 	addTodo: (open: ITodo) => void;
 	todos: ITodo[];
-	updateCompleted: (id: number, data: ITodo) => void;
+	updateCompleted: (id: number) => void;
 	deleteTodo: (id: number) => void;
 	editTodo: (todo: ITodo) => void;
 }
