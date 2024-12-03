@@ -39,9 +39,11 @@ export default {
 			},
 			boxShadow: {
 				'inset-soft': '0px 3px 1px 0px #FFFFFF99 inset',
+				button: '0px 3px 1px 0px #A8B5DE80 inset, 0px 4px 4px 0px #00000040',
 				'soft-black': '0px 4px 4px 0px #00000040',
 				'solid-black': '0px 2px 0px 0px #000000',
 				'subtle-black': '0px 4px 4px 0px #0000001A',
+				'black-blur': '0px 4px 4px 0px #00000026',
 			},
 			fontFamily: {
 				sans: ['Roboto', 'sans-serif'],

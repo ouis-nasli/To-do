@@ -1,20 +1,20 @@
 import { FC } from 'react';
-import { Plan } from './TodoIndex';
 import CheckedSVG from '@/assets/icons/checked.svg';
 import UncheckedSVG from '@/assets/icons/unchecked.svg';
+import { ITodo, todoStore } from '../../store/todoStore';
+import { Link } from 'react-router-dom';
 
 interface IProps {
-	todo: Plan;
-	handleToggle: (id: number) => void;
+	todo: ITodo;
 }
 
-const TodoCard: FC<IProps> = ({ todo, handleToggle }) => {
+const TodoCard: FC<IProps> = ({ todo }) => {
+	const updateCompleted = todoStore((state) => state.updateCompleted);
 	const handleCheck = () => {
-		handleToggle(todo.id);
+		updateCompleted(todo.id);
 	};
 	return (
 		<div
-			key={todo.id}
 			className={`flex items-center justify-between w-full py-[23px] pr-[19px] pl-[23px] border shadow-subtle-black bg-white border-neutral-light rounded-md`}
 		>
 			<div className='flex items-center cursor-pointer' onClick={handleCheck}>
@@ -37,9 +37,11 @@ const TodoCard: FC<IProps> = ({ todo, handleToggle }) => {
 					{todo.text}
 				</span>
 			</div>
-			<button className='text-primary-dark font-medium p-3 border border-primary-dark rounded focus:outline-none'>
-				Edit
-			</button>
+			<Link to={`/update/${todo.id}`}>
+				<button className='text-primary-dark font-medium p-3 border border-primary-dark rounded focus:outline-none'>
+					Edit
+				</button>
+			</Link>
 		</div>
 	);
 };
