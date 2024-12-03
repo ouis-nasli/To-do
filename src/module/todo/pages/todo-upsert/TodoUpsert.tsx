@@ -33,12 +33,10 @@ const TodoUpsert = () => {
 			selectedTodo.text = inputs.text;
 			editTodo(selectedTodo);
 		}
-		// console.log(inputs);
 		navigate('/');
 	};
 
 	const handleDelete = () => {
-		console.log(id);
 		deleteTodos(+id! as unknown as number);
 		navigate('/');
 	};
